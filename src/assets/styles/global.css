@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Estilos personalizados */
+:root {
+  --primary-color: #ce2029;
+  --secondary-color: #2b1f59;
+  --accent-color: #f6dc04;
+  --light-color: #f4f4f4;
+  --dark-color: #000000;
+}
+
+/* Tipografía global */
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--light-color);
+  color: var(--dark-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Modo oscuro */
+.dark {
+  background-color: var(--dark-color);
+  color: var(--light-color);
+}
+
+/* Ejemplo de encabezado */
+h1 {
+  font-family: "Bebas Neue", cursive;
+  font-size: 2.5rem;
+}
+
+h2, h3, h4, h5, h6 {
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--secondary-color);
+}
+
+/* Botones */
+button {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  font-family: "Montserrat", sans-serif;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: var(--secondary-color);
+  transform: scale(1.05);
+}

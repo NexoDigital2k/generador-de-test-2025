@@ -1,18 +1,19 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useRouter } from 'next/router';
 
-const App = () => {
-  const navigate = useNavigate();
+const Login = () => {
+  const router = useRouter();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   const handleLogin = async (e) => {
     e.preventDefault();
+    // Aquí iría la lógica para autenticar al usuario
     console.log('Email:', email);
     console.log('Password:', password);
 
     // Redirigir tras un inicio de sesión exitoso
-    navigate('/dashboard');
+    router.push('/dashboard');
   };
 
   return (
@@ -70,4 +71,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Login;
